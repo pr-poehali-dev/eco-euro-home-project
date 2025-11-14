@@ -13,40 +13,73 @@ const ProjectsCalculatorSection = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const calculatePrice = () => {
-    const basePrice = 25000;
+    const basePrice = 21000;
     const totalArea = parseInt(area) || 100;
     const floorsCount = parseInt(floors) || 1;
-    const floorMultiplier = floorsCount === 2 ? 1.3 : 1;
+    const floorMultiplier = floorsCount === 2 ? 1.2 : 1;
     return Math.round(totalArea * basePrice * floorMultiplier);
   };
 
   const projects = [
     {
       id: 1,
-      name: 'Эко-Комфорт 80',
-      area: 80,
+      name: 'Дом 6х6',
+      area: 36,
       floors: 1,
-      bedrooms: 2,
-      price: 2000000,
+      bedrooms: 1,
+      price: 756000,
+      pricePerMeter: 21000,
       image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/69bf59a6-57b5-43a1-8d61-a6dcbc62b364.jpg'
     },
     {
       id: 2,
-      name: 'Лесной Уют 120',
-      area: 120,
-      floors: 2,
-      bedrooms: 3,
-      price: 3120000,
+      name: 'Дом 6х8',
+      area: 48,
+      floors: 1,
+      bedrooms: 2,
+      price: 1008000,
+      pricePerMeter: 21000,
       image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/e9854526-8fff-4ec8-968c-d152b0611c3c.jpg'
     },
     {
       id: 3,
-      name: 'Природный Дом 150',
-      area: 150,
+      name: 'Дом 8х8',
+      area: 64,
+      floors: 1,
+      bedrooms: 2,
+      price: 1344000,
+      pricePerMeter: 21000,
+      image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/69bf59a6-57b5-43a1-8d61-a6dcbc62b364.jpg'
+    },
+    {
+      id: 4,
+      name: 'Дом 9х9',
+      area: 81,
+      floors: 1,
+      bedrooms: 3,
+      price: 1701000,
+      pricePerMeter: 21000,
+      image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/e9854526-8fff-4ec8-968c-d152b0611c3c.jpg'
+    },
+    {
+      id: 5,
+      name: 'Дом 10х10',
+      area: 100,
+      floors: 1,
+      bedrooms: 3,
+      price: 2100000,
+      pricePerMeter: 21000,
+      image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/69bf59a6-57b5-43a1-8d61-a6dcbc62b364.jpg'
+    },
+    {
+      id: 6,
+      name: 'Дом 10х12',
+      area: 120,
       floors: 2,
       bedrooms: 4,
-      price: 4875000,
-      image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/69bf59a6-57b5-43a1-8d61-a6dcbc62b364.jpg'
+      price: 3024000,
+      pricePerMeter: 25200,
+      image: 'https://cdn.poehali.dev/projects/eb4c1665-7b7f-4898-b507-20dc97701a96/files/e9854526-8fff-4ec8-968c-d152b0611c3c.jpg'
     }
   ];
 
